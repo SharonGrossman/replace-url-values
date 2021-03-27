@@ -1,0 +1,34 @@
+{
+  "name": "replace-url-values",
+  "version": "0.0.1",
+  "description": "A utility to replace values in a given URL",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "rm -rf dist && tsc",
+    "prepublish": "yarn build",
+    "test": "jest --config=tests/jest.config.unit.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharongrossman/replace-url-values.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharongrossman/replace-url-values/issues"
+  },
+  "homepage": "https://github.com/sharongrossman/replace-url-values#readme",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.13.0",
+    "@typescript-eslint/parser": "^4.13.0",
+    "eslint": "^7.17.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "url": "^0.11.0"
+  }
+}
