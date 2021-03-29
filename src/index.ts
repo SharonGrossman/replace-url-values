@@ -15,7 +15,7 @@ const parsePath = (url: string) => {
 
     const valuesIndex = url.indexOf('/');
 
-    return new URL(url.substring(valuesIndex).split('&')[0]).pathname;
+    return url.substring(valuesIndex).split('&')[0];
 };
 
 const isSubUrl = (url: string) => url.startsWith('/');
