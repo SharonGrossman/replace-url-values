@@ -8,7 +8,17 @@ export const replaceUrlValues = (url: string, replacement = '#val') => {
         .join('/')}`;
 };
 
-const parsePath = (url: string) => new URL(url).pathname;
+const parsePath = (url: string) => {
+    if (!isSubUrl(url)) {
+        return new URL(url).pathname;
+    }
+
+    const valuesIndex = url.indexOf('/');
+
+    return new URL(url.substring(valuesIndex).split('&')[0]).pathname;
+};
+
+const isSubUrl = (url: string) => url.startsWith('/');
 
 const getChunks = (path: string) => path.split('/').filter((chunk) => chunk !== '');
 
