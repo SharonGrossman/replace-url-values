@@ -1,11 +1,17 @@
-import {URL} from 'url';
 import {masks} from './masks';
+import {URL} from 'url';
 
-export const replaceUrlValues = (url: string, replacement = '#val') => {
+export const replaceUrlValues = (url: string, replacement = '#val', fallback = 'unknown') => {
+    try {
+
     const parseResult = parsePath(url);
     return `/${getChunks(parseResult)
         .map((chunk) => (isUrlValue(chunk) ? replacement : chunk))
         .join('/')}`;
+    } catch(error) {
+        return fallback;
+    }
+
 };
 
 const parsePath = (url: string) => {

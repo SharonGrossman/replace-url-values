@@ -1,6 +1,6 @@
 {
   "name": "replace-url-values",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A utility to replace values in a given URL",
   "main": "dist/index.js",
   "scripts": {
