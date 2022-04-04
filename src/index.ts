@@ -1,5 +1,4 @@
 import {masks} from './masks';
-import {URL} from 'url';
 
 export const replaceUrlValues = (url: string, replacement = '#val', fallback = 'unknown') => {
     try {

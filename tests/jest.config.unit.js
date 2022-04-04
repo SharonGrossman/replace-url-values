@@ -5,7 +5,7 @@ module.exports = {
     testMatch: ['<rootDir>/tests/specs/**'],
     globals: {
         'ts-jest': {
-            tsConfig: {
+            tsconfig: {
                 strictPropertyInitialization: false,
                 noUnusedLocals: false,
             },
